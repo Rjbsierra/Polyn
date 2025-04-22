@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">polyn</string>
+    <string name="title_activity_main">polyn</string>
+    <string name="package_name">com.polyn.app</string>
+    <string name="custom_url_scheme">com.polyn.app</string>
+</resources>
