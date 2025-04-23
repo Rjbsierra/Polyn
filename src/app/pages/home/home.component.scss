@@ -1,0 +1,19 @@
+.contaier-default {
+    width: 100vw;
+    height: 100vh;
+
+    @media screen and (orientation: landscape){
+        &::after {
+            content: "Landscape";
+          }
+        color:cadetblue;
+        background-color:burlywood;
+        
+     
+    }
+    @media (orientation: portrait){
+        color: aliceblue;
+        background-color: aquamarine;
+    }
+}
+
