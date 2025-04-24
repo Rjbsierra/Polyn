@@ -1,0 +1,40 @@
+@use '../../style/mixins' as *;
+
+:host{
+    @include flexed;
+    height: 50px;
+    width: 100%;
+}
+
+.footer{
+    @include flexed;
+    width: 100%;
+    background-color: blueviolet;
+    flex-direction: row;
+
+}
+
+.footer__section{
+    @include flexed;
+    flex: 1;
+    justify-content: center;
+    align-content: center;
+}
+.footer__button{
+    @include flexed;
+    flex-direction: column;
+    background-color: aliceblue;
+    height: inherit;
+    width: fit-content;
+}
+.footer__button-img{
+    @include flexed;
+    width: 25px;
+    aspect-ratio: 1/1;
+    background-color: black;
+    border-radius: 100%;
+}
+.footer__button-title{
+    @include flexed;
+    flex: auto;
+}

@@ -10,6 +10,7 @@ import { ShopComponent } from './pages/shop/shop.component';
 import { RankComponent } from './pages/rank/rank.component';
 import { HeaderComponent } from './component/header/header.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { FooterComponent } from './component/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     ErrorComponent,
     ShopComponent,
     RankComponent,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

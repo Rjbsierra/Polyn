@@ -1,0 +1,53 @@
+
+@use '../../style/mixins' as *;
+
+:host{
+    @include flexed;
+    width: 100%;
+    height: 50px
+}
+.header{
+    @include flexed;
+    flex-direction: row;
+    width: 100%;
+    border-bottom: 1px solid rgba($color: #000000, $alpha: .2);
+
+}
+
+
+.header__section{
+    @include flexed;
+    &--button{
+        width: 10%;
+        background-color: aliceblue;
+        justify-content: center;
+        align-items: center;
+    }
+    &--content{
+        width: 90%;
+        background-color:black;
+    }
+        
+}
+.header__content{
+    @include flexed;
+    &--title{
+        flex: 1.2;
+        background-color:aqua;
+        justify-content: center;
+    }
+    &--badge{
+        flex: 1;
+        background-color:aquamarine;
+    }
+}
+.header__button{
+    height: 40px;
+    aspect-ratio: 1/1;
+    background-color: #000000;
+    border-radius: 100%;
+}
+.header__button-img{
+
+
+}

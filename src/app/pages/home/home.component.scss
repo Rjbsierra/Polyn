@@ -1,6 +1,17 @@
-.contaier-default {
+@use '../../style/mixins' as *;
+
+:host{
+    @include flexed;
+   width: 100%;
+   height: 100%;
+    flex-direction: column
+}
+.home {
+    @include flexed;
     width: 100vw;
-    height: 100vh;
+    flex: auto;
+
+
 
     @media screen and (orientation: landscape){
         &::after {
