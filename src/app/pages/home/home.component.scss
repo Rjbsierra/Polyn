@@ -9,13 +9,14 @@
 .home {
     @include flexed;
     width: 100vw;
+    box-sizing: border-box;
     flex: auto;
-
-
+    flex-direction: column;
+    padding: 1rem;
 
     @media screen and (orientation: landscape){
         &::after {
-            content: "Landscape";
+
           }
         color:cadetblue;
         background-color:burlywood;
@@ -28,3 +29,146 @@
     }
 }
 
+.home__section{
+    @include flexed;
+
+    &--exp{
+       height: 5%;
+       background-color: brown;
+    }
+    &--content{
+        height: 95%;
+        background-color: whitesmoke;
+    }
+}
+
+.home__section-top{
+    @include flexed;
+    @include centered;
+    &--points{
+        width:15%;
+        background-color: wheat;
+    }
+    &--bar{
+        width: 85%;
+        background-color: black;
+    }
+}
+.home_points{
+    margin: 0;
+}
+
+.home__bar{
+    background-color: white;
+    border: 1px solid green;
+    border-radius: 100vh;
+    height: 10px;
+    width: 100%;
+}
+
+.home__content{
+    @include flexed;
+    align-content: end;
+    background-color: aqua;
+    width: 100%;
+    border-radius: 10px;
+    flex-direction: column;
+}
+
+.home__content-body{
+    @include flexed;
+    width: 90%;
+    background-color: white;
+    height: fit-content;
+    border-radius: 10px 0px 0px 10px;
+    border-width: 1px 0px 1px 1px;
+    border-style: solid;
+    border-color: yellowgreen;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin-top: .5rem
+    
+}
+.home__content-section{
+    @include flexed;
+    &--button{
+        width: 10%;
+        background-color: blueviolet;
+        @include centered;
+    }
+    &--details{
+        width: 90%;
+        background-color: cornflowerblue;
+        box-sizing: border-box;
+        padding: 1rem;
+    }
+}
+.home__content-button{
+    background-color: aliceblue;
+    border-radius: 100vh;
+    height: 20px ;
+    aspect-ratio: 1/1;
+}
+
+.home__content-details{
+    @include flexed;
+    &--info{
+        height: 75%;
+        width: 100%;
+        background-color: aqua;
+        flex-direction: column;
+    }
+    &--exp{
+        @include centered;
+        height: 25%;
+        width: 100%;
+        background-color: cadetblue;
+        
+    }
+}
+.home__content-info{
+    @include flexed;
+    
+    &--data{
+        width: 80%;
+        background-color: darkgoldenrod;
+        
+    }
+    &--freq{
+        justify-content: end;
+        height: 100%;
+        width: 20%;
+        background-color: darkorange;
+    }
+}
+.home__content-data-img{
+    @include flexed;
+    @include centered;
+    background-color: aqua;
+    border-radius: 100vh;
+    width: 16px;
+    height: 16px;
+}
+.home__content-img{
+    background-color: black;
+    height: 8px;
+    aspect-ratio: 1/1;
+}
+.home__content-data-status{
+width: fit-content;
+margin: 0;
+}
+.home__content-data-task{
+margin: 0;
+}
+.home__content-freq{
+    margin: 0;
+}
+.home__content-exp{
+    width: 95%;
+    height: 60%;
+    background-color: gray;
+    border: 1px solid green;
+    box-sizing: border-box;
+    border-radius: 100vh;
+}
