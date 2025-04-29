@@ -1,0 +1,157 @@
+@use '../../style/mixins' as *;
+@use '../../style/var' as *;
+:host{
+    @include flexed;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.task{
+    @include flexed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: end
+}
+
+.task__container{
+    @include flexed;
+    height: 68%;
+    width: inherit;
+}
+
+.task__header{
+    @include flexed;
+    height: 10%;
+    width: inherit;
+    background-color: $blue;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: .5rem;
+    padding-right: .5rem;
+}
+
+.task__header-button{
+    @include flexed;
+    height: 70%;
+    aspect-ratio: 1/1;
+    background-color: white;
+    border-radius: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+.task__header-button-img{
+    background-color: $blue;
+    height: 10px;
+    aspect-ratio: 1/1;
+}
+.task_header-background{
+    @include flexed;
+    width: 90%;
+}
+
+.task__body{
+    @include flexed;
+    background-color: white;
+    height: 90%;
+    width: inherit;
+}
+
+.task__body-container{
+    @include flexed;
+    &--content{
+        height: 88%;
+        width: inherit;
+        align-items: center;
+        justify-content: center;
+    }
+    &--button{
+        width: inherit;
+        height: 12%;
+        justify-content: center;
+        align-content: start;
+    }
+}
+.task__content{
+    @include flexed;
+    height: 90%;
+    width: 85%;
+    background-color: white;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    flex-direction: column;
+    box-sizing: border-box;
+ 
+}
+
+.task__content-input{
+    @include flexed;
+    width: 100%;
+    flex-direction: row;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    padding: .5rem;
+    &--activity{
+        flex: 1;
+    }
+    &--time{
+        flex: 1;
+    }
+    &--routine{
+        flex: 1.5;
+        z-index: 2;
+        position: relative;
+        
+        &::before{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: $blue;
+            transform: translateX(-.5rem);
+            z-index: -1;
+
+        }
+    }
+    &--reminder{
+        flex: 1;
+    }
+    > *{
+        margin: 0;
+    }
+
+}
+.task__content-text{
+    color: $blue;
+    font-family: 'Roboto-Bold', sans-serif;
+   
+    width: 100%;
+    &--rou{
+        font-family: 'Roboto', sans-serif;
+        color: white;
+    }
+}
+
+.task__body-button{
+    @include flexed;
+    width: fit-content;
+    background-color: $green;
+    flex-direction: row;
+    padding: .5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    border-radius: 5px;
+
+}
+.task__body-button-text{
+    margin: 0;
+    color: white;
+    padding-right: .5rem;
+}
+.task__body-button-img{
+    width: 1rem;
+    aspect-ratio: 1/1;
+    background-color: aliceblue;
+}

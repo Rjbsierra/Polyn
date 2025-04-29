@@ -11,6 +11,11 @@ import { RankComponent } from './pages/rank/rank.component';
 import { HeaderComponent } from './component/header/header.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { FooterComponent } from './component/footer/footer.component';
+import { TaskComponent } from './component/task/task.component';
+import { RegComponent } from './component/input/reg/reg.component';
+import { TimeComponent } from './component/input/time/time.component';
+import { RoutineComponent } from './component/input/routine/routine.component';
+import { ReminderComponent } from './component/input/reminder/reminder.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +26,12 @@ import { FooterComponent } from './component/footer/footer.component';
     ShopComponent,
     RankComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    TaskComponent,
+    RegComponent,
+    TimeComponent,
+    RoutineComponent,
+    ReminderComponent
   ],
   imports: [
     BrowserModule,
