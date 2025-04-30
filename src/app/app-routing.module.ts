@@ -4,11 +4,12 @@ import { HomeComponent } from './pages/home/home.component';
 import { SettingsComponent } from './pages/settings/settings.component';
 import { ErrorComponent } from './pages/error/error.component';
 import { RankComponent } from './pages/rank/rank.component';
+import { ShopComponent } from './pages/shop/shop.component';
 
 const routes: Routes = [
   {
     path: "",
-    component: SettingsComponent
+    component: ShopComponent
   },
   {
     path: "home",

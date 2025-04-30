@@ -1,0 +1,114 @@
+@use '../../style/mixins' as *;
+@use '../../style/var' as *;
+
+:host{
+    @include flexed;
+    height: 100%;
+    width: 100%;
+}
+
+.shop{
+    @include flexed;
+    width: 100vw;
+    background-color: white;
+}
+.shop__header{
+    height: 6%;
+    width: 100%;
+    background-color: $blue;
+}
+.shop__header-section{
+    @include flexed;
+    height: 100%;
+    &--icon{
+        width: 10%;
+        justify-content: center;
+        align-items: center;
+    }
+    &--background{
+        width: 90%;
+    }
+}
+.shop__icon{
+    height: 80%;
+    aspect-ratio: 1/1;
+    background-color: white;
+    border-radius: 100vh;
+}
+
+.shop__body{
+    @include flexed;
+    height: 94%;
+    width: 100%;
+    flex-direction: column;
+}
+
+.shop__body-section {
+    @include flexed;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    &--img{
+        height: 20%;
+    }
+    &--content{
+        flex: 1;
+    }
+}
+.shop__img{
+    @include flexed;
+    height: 80%;
+    aspect-ratio: 1/1;
+    background-color: aliceblue;
+    border-radius: 100vh;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.shop__content{
+    @include flexed;
+    width: 80%;
+    height: 80%;
+    background-color: $green;
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 10px rgba(0,0,0,.3);
+    justify-content: center;
+    align-items: center;
+}
+
+.shop__content-container{
+    @include flexed;
+    width: 85%;
+    height: 80%;
+    background-color: $pale-green;
+    border-radius: 5px;
+    flex-direction: column;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.shop__content-section{
+    @include flexed;
+    width: 100%;
+    &--banner{
+        height: 25%;
+        background-color: $blue;
+    }
+    &--drops{
+        height: 75%;
+        flex-direction: row;
+
+    }
+}
+.shop__content-banner{
+    height: 100%;
+    width: 100%;
+}
+.shop__content-drops{
+    @include flexed;
+    width: 50%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: aliceblue;
+}
