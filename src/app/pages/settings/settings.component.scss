@@ -1,0 +1,150 @@
+@use '../../style/mixins' as *;
+@use '../../style/var' as *;
+
+:host{
+    @include flexed;
+    width: 100%;
+    height: 100%;
+}
+
+.settings{
+    @include flexed;
+    width: 100vw;
+    background-color: white;
+}
+
+.settings__header{
+    height: 6%;
+    width: 100%;
+    background-color: $blue;
+}
+.settings__body{
+    width: 100%;
+    height: 94%;
+}
+
+.settings__header-section{
+    @include flexed;
+    height: 100%;
+    &--icon{
+        width: 10%;
+        justify-content: center;
+        align-items: center;
+    }
+    &--background{
+        width: 90%;
+    }
+}
+.settings__icon{
+    height: 80%;
+    aspect-ratio: 1/1;
+    background-color: white;
+    border-radius: 100vh;
+}
+
+.settings__body-section{
+    @include flexed;
+    &--profile{
+        height: 30%;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+    }
+    &--name{
+        height: 6%;
+        justify-content: center;
+        align-items: center;
+    }
+    &--status{
+        height: 18%
+    }   
+    &--button{
+        height: 46%;
+    }
+}
+.settings__body-profile{
+    @include flexed;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+    height: 50%;
+    width: 100%;
+    background-color: $blue;
+    box-sizing: border-box;
+
+}
+
+.settings__profile-wrapper{
+    position: absolute;
+    height: 80%;
+    aspect-ratio: 1/1;
+    background-color: aliceblue;
+    border-radius: 100vh;
+}
+.settings__background-wrapper{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.settings__profile-background{
+    @include flexed;
+    right: .2rem;
+    top: .2rem;
+    position: absolute;
+    height: 20%;
+    aspect-ratio: 1/1;
+    background-color: aliceblue;
+
+}
+.settings__name{
+    background-color: $blue;
+    padding: .5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    border-radius: 100vh;
+    color: white;
+}
+.settings__body-status{
+    @include flexed;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    text-align: center;
+}
+.settings-status-text{
+    width: 100%;
+    margin: 0;
+    font-family: 'Roboto-Bold', sans-serif;
+    font-style: italic;
+    letter-spacing: .05rem;
+    color: $blue;
+    padding-top: .5rem;
+}
+.settings__status-value{
+    width: 100%;
+    margin: 0;
+    color: $blue;
+    padding-top: .5rem;
+}
+
+.settings__body-button{
+    @include flexed;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-end;
+    box-sizing: border-box;
+    padding-bottom: 2rem;
+}
+
+.settings__button{
+    width: fit-content;
+    padding: .5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    outline: 0;
+    border: 0;
+    background-color: red;
+    border-radius: 100vh;
+}
