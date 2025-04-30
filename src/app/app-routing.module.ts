@@ -9,7 +9,7 @@ import { ShopComponent } from './pages/shop/shop.component';
 const routes: Routes = [
   {
     path: "",
-    component: ShopComponent
+    component: RankComponent
   },
   {
     path: "home",
