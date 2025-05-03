@@ -1,5 +1,5 @@
 @use '../../style/mixins' as *;
-
+@use '../../style/var' as *;
 :host{
     @include flexed;
    width: 100%;
@@ -13,7 +13,9 @@
     flex: auto;
     flex-direction: column;
     padding: 1rem;
-
+    padding-top: 0rem;
+    
+    background-color: white;
     @media screen and (orientation: landscape){
         &::after {
 
@@ -24,21 +26,23 @@
      
     }
     @media (orientation: portrait){
-        color: aliceblue;
-        background-color: aquamarine;
+        color: $blue;
     }
 }
 
 .home__section{
     @include flexed;
-
+    background-color: white;
     &--exp{
-       height: 5%;
-       background-color: brown;
+       height: 7%;
     }
     &--content{
-        height: 95%;
-        background-color: whitesmoke;
+        height: 93%;
+        background-color: rgba(0,0,0,0.05);
+        border-radius: 8px;
+        box-shadow: inset 0px 3px 4px rgba(0,0,0,0.2) ;
+        overflow: hidden;
+        
     }
 }
 
@@ -47,29 +51,37 @@
     @include centered;
     &--points{
         width:15%;
-        background-color: wheat;
     }
     &--bar{
         width: 85%;
-        background-color: black;
+        box-sizing: border-box;
+        padding-left: 0;
+        padding-right: 1rem;
+        padding-top: 0;
+        padding-bottom: 0; 
     }
 }
 .home_points{
     margin: 0;
+    font-size: .8rem;
+}
+
+.home_points-sep{
+    font-weight: bold;
 }
 
 .home__bar{
     background-color: white;
-    border: 1px solid green;
+    border: 1px solid $green;
     border-radius: 100vh;
     height: 10px;
     width: 100%;
+ 
 }
 
 .home__content{
     @include flexed;
     align-content: end;
-    background-color: aqua;
     width: 100%;
     border-radius: 10px;
     flex-direction: column;
@@ -77,37 +89,36 @@
 
 .home__content-body{
     @include flexed;
-    width: 90%;
+    width: 97%;
     background-color: white;
     height: fit-content;
-    border-radius: 10px 0px 0px 10px;
-    border-width: 1px 0px 1px 1px;
-    border-style: solid;
-    border-color: yellowgreen;
+    border-radius: 20px 0px 0px 20px;
     overflow: hidden;
     box-sizing: border-box;
-    margin-top: .5rem
+    margin-top: 4%;
+    box-shadow: 0px 3px 4px rgba(0,0,0,0.2);
     
 }
 .home__content-section{
     @include flexed;
     &--button{
         width: 10%;
-        background-color: blueviolet;
+        background-color: $blue;
         @include centered;
     }
     &--details{
         width: 90%;
-        background-color: cornflowerblue;
+        background-color: white;
         box-sizing: border-box;
-        padding: 1rem;
+        padding: .5rem;
     }
 }
 .home__content-button{
-    background-color: aliceblue;
+    background-color: rgba(255,255,255,.9);
     border-radius: 100vh;
     height: 20px ;
     aspect-ratio: 1/1;
+    box-shadow: inset 0px 4px 3px rgba(0,0,0,.3)
 }
 
 .home__content-details{
@@ -115,14 +126,12 @@
     &--info{
         height: 75%;
         width: 100%;
-        background-color: aqua;
         flex-direction: column;
     }
     &--exp{
         @include centered;
         height: 25%;
         width: 100%;
-        background-color: cadetblue;
         
     }
 }
@@ -131,44 +140,53 @@
     
     &--data{
         width: 80%;
-        background-color: darkgoldenrod;
         
     }
     &--freq{
         justify-content: end;
         height: 100%;
         width: 20%;
-        background-color: darkorange;
     }
 }
 .home__content-data-img{
     @include flexed;
     @include centered;
-    background-color: aqua;
+    background-color: rgba(0,0,0,0.2);
     border-radius: 100vh;
     width: 16px;
     height: 16px;
 }
 .home__content-img{
-    background-color: black;
+    background-color: $blue;
     height: 8px;
     aspect-ratio: 1/1;
 }
 .home__content-data-status{
-width: fit-content;
-margin: 0;
+    padding-left: .5rem;
+    width: fit-content;
+    margin: 0;
+    font-size: .7rem;
 }
 .home__content-data-task{
-margin: 0;
+    padding-top: .5rem;
+    margin: 0;
 }
 .home__content-freq{
     margin: 0;
+    font-size: .7rem;
+    background-color: $blue;
+    height: fit-content;
+    color: white;
+    padding: .2rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    border-radius: 100vh;
 }
 .home__content-exp{
     width: 95%;
     height: 60%;
-    background-color: gray;
-    border: 1px solid green;
+    background-color: rgba(0,0,0,0.05);
+    box-shadow: inset 0px 2px 2px rgba(0,0,0,0.2);
     box-sizing: border-box;
     border-radius: 100vh;
 }

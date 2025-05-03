@@ -7,10 +7,7 @@ import { RankComponent } from './pages/rank/rank.component';
 import { ShopComponent } from './pages/shop/shop.component';
 
 const routes: Routes = [
-  {
-    path: "",
-    component: RankComponent
-  },
+ 
   {
     path: "home",
     component: HomeComponent
@@ -18,6 +15,19 @@ const routes: Routes = [
   {
     path: "settings",
     component: SettingsComponent
+  }, 
+  {
+    path: "rank",
+    component: RankComponent
+  },
+  {
+    path: "shop",
+    component: ShopComponent
+  },
+  {
+    path: "",
+    redirectTo: "/home",
+    pathMatch: 'full'
   },
   {
     path: "**",

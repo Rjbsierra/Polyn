@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output, output } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
+
+@Output() isOpened = new EventEmitter<void>();
+
+
+  toggleTask(){
+    this.isOpened.emit();
+  }
+
+  
 
 }

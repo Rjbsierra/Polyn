@@ -16,6 +16,7 @@ import { RegComponent } from './component/input/reg/reg.component';
 import { TimeComponent } from './component/input/time/time.component';
 import { RoutineComponent } from './component/input/routine/routine.component';
 import { ReminderComponent } from './component/input/reminder/reminder.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -35,13 +36,14 @@ import { ReminderComponent } from './component/input/reminder/reminder.component
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: !isDevMode(),
       // Register the ServiceWorker as soon as the application is stable
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
-    })
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]
